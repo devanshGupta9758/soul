@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Saarthi</string>
+    <string name="title_activity_search_wheelchair">SearchWheelchair</string>
+    <string name="title_activity_my_wheelchair">MyWheelchair</string>
+</resources>

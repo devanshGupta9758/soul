@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<!--        <fragment-->
+<!--            android:id="@+id/map"-->
+<!--            android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:padding="10dp"-->
+<!--            tools:context=".SearchWheelchair"-->
+<!--            map:layout_constraintStart_toStartOf="parent"-->
+<!--            map:layout_constraintEnd_toEndOf="parent"-->
+<!--            map:layout_constraintTop_toTopOf="parent"-->
+<!--            map:layout_constraintBottom_toTopOf="@+id/book"-->
+<!--            tools:layout="@layout/activity_search_wheelchair" />-->
+
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.0"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            map:layout_constraintVertical_bias="0.0"
+            tools:context=".SearchWheelchair" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/avail"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="44dp"
+            android:backgroundTint="#C1CCE6"
+            map:cardCornerRadius="15dp"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.491"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/map">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Available Wheelchair : "
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/allWheelchair"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+
+                </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:backgroundTint="#C1CCE6"
+            map:cardCornerRadius="15dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="@+id/avail"
+            map:layout_constraintStart_toStartOf="@+id/avail"
+            map:layout_constraintTop_toBottomOf="@+id/avail"
+            map:layout_constraintVertical_bias="0.179">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Enter Phone : "
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="sans-serif"
+                            android:hint="Phone"
+                            android:inputType="phone"
+                            android:textSize="17sp" />
+
+
+                </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/book"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@drawable/book_back"
+            android:fontFamily="sans-serif-medium"
+            android:text="Book Now"
+            android:textSize="20sp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
